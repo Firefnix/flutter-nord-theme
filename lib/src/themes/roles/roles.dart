@@ -59,4 +59,26 @@ abstract class NordColorRoles {
   Color get error;
 
   Color get toggleableActive;
+
+  TextSelectionThemeData get textSelection;
+
+  ButtonStyle get textButton;
+
+  ButtonStyle get elevatedButton;
+
+  ButtonStyle get outlinedButton;
+}
+
+abstract class TextButtonRoles {
+  Color get primary;
+
+  Color get onSurface;
+
+  EdgeInsetsGeometry get padding;
+
+  Color get background;
+
+  Color get shadow;
+
+  TextStyle get textStyle;
 }

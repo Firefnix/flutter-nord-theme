@@ -8,15 +8,15 @@ class NordDarkColorRoles implements NordColorRoles {
   /// It should probably be a bit darker than [accent], so nord9 looks like a
   /// good choice.
   @override
-  final Color primary = NordColors.polarNight.darker;
+  final Color primary = NordColors.$7;
 
   /// Source: Nord's doc.
   @override
-  final Color accent = NordColors.polarNight.lighter;
+  final Color accent = NordColors.$8;
 
   /// The same as [background].
   @override
-  final Color canvas = NordColors.$0;
+  Color get canvas => background;
 
   /// Source: Nord's website.
   @override
@@ -24,7 +24,7 @@ class NordDarkColorRoles implements NordColorRoles {
 
   /// The same as [background].
   @override
-  final Color scaffoldBackground = NordColors.$0;
+  Color get scaffoldBackground => background;
 
   /// [AppBarTheme]'s background color is [NordColors.$0].
   @override
@@ -70,10 +70,11 @@ class NordDarkColorRoles implements NordColorRoles {
   @override
   final Color unselectedWidget = NordColors.snowStorm.lightest.withAlpha(0xB3);
 
-  /// The same as [unselectedWidget].
+  /// The same as [unselectedWidget], but with less alpha.
   @override
   final Color disabled = NordColors.snowStorm.lightest.withAlpha(0xB3);
 
+  /// Source: Nord's doc.
   @override
   final Color button = NordColors.$1;
 
@@ -89,7 +90,7 @@ class NordDarkColorRoles implements NordColorRoles {
   ///
   /// The same as [primary].
   @override
-  final Color indicator = NordColors.polarNight.darker;
+  Color get indicator => primary;
 
   /// "The color to use for hint text or placeholder text, e.g. in
   /// [TextField] fields." (Flutter's code)
@@ -102,5 +103,33 @@ class NordDarkColorRoles implements NordColorRoles {
 
   /// The same as [hover].
   @override
-  final Color toggleableActive = NordColors.$3.withAlpha(50);
+  Color get toggleableActive => hover;
+
+  @override
+  // TODO: implement textSelection
+  TextSelectionThemeData get textSelection => TextSelectionThemeData(
+        selectionColor: NordColors.frost.darker,
+      );
+
+  @override
+  ButtonStyle get textButton => ButtonStyle(
+        padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+          EdgeInsets.symmetric(horizontal: 16.0),
+        ),
+        foregroundColor: MaterialStateProperty.resolveWith<Color>((states) {
+          if (states.contains(MaterialState.disabled)) return disabled;
+          return accent;
+        }),
+      );
+
+  @override
+  ButtonStyle get elevatedButton => ButtonStyle(
+        backgroundColor: MaterialStateProperty.all<Color>(accent),
+      );
+
+  @override
+  ButtonStyle get outlinedButton => ButtonStyle(
+        foregroundColor: MaterialStateProperty.all<Color>(accent),
+        backgroundColor: MaterialStateProperty.all<Color>(background),
+      );
 }
