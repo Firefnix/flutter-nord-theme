@@ -1,7 +1,7 @@
 import 'package:flutter_nord_theme/src/colors/colors.dart';
 
 class NordPolarNight {
-  NordPolarNight();
+  const NordPolarNight();
 
   final darkest = NordColors.$0;
   final darker = NordColors.$1;

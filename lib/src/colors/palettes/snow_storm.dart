@@ -1,7 +1,7 @@
 import '../colors.dart';
 
 class NordSnowStorm {
-  NordSnowStorm();
+  const NordSnowStorm();
 
   final darkest = NordColors.$4;
   final medium = NordColors.$5;

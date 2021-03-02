@@ -10,31 +10,31 @@ import 'palettes/palettes.dart';
 /// The main source: https://www.nordtheme.com/docs/colors-and-palettes.
 abstract class NordColors {
   /// The [polarNight] (dark greys) color palette.
-  static final polarNight = NordPolarNight();
+  static const polarNight = NordPolarNight();
 
   /// The [snowStorm] (light greys) color palette.
-  static final snowStorm = NordSnowStorm();
+  static const snowStorm = NordSnowStorm();
 
   /// The [frost] (blues) color palette.
-  static final frost = NordFrost();
+  static const frost = NordFrost();
 
   /// The [polarNight] (vivid colors) color palette.
-  static final aurora = NordAurora();
+  static const aurora = NordAurora();
 
-  static final $0 = Color(NordColorCodes.$0);
-  static final $1 = Color(NordColorCodes.$1);
-  static final $2 = Color(NordColorCodes.$2);
-  static final $3 = Color(NordColorCodes.$3);
-  static final $4 = Color(NordColorCodes.$4);
-  static final $5 = Color(NordColorCodes.$5);
-  static final $6 = Color(NordColorCodes.$6);
-  static final $7 = Color(NordColorCodes.$7);
-  static final $8 = Color(NordColorCodes.$8);
-  static final $9 = Color(NordColorCodes.$9);
-  static final $10 = Color(NordColorCodes.$10);
-  static final $11 = Color(NordColorCodes.$11);
-  static final $12 = Color(NordColorCodes.$12);
-  static final $13 = Color(NordColorCodes.$13);
-  static final $14 = Color(NordColorCodes.$14);
-  static final $15 = Color(NordColorCodes.$15);
+  static const $0 = const Color(NordColorCodes.$0);
+  static const $1 = const Color(NordColorCodes.$1);
+  static const $2 = const Color(NordColorCodes.$2);
+  static const $3 = const Color(NordColorCodes.$3);
+  static const $4 = const Color(NordColorCodes.$4);
+  static const $5 = const Color(NordColorCodes.$5);
+  static const $6 = const Color(NordColorCodes.$6);
+  static const $7 = const Color(NordColorCodes.$7);
+  static const $8 = const Color(NordColorCodes.$8);
+  static const $9 = const Color(NordColorCodes.$9);
+  static const $10 = const Color(NordColorCodes.$10);
+  static const $11 = const Color(NordColorCodes.$11);
+  static const $12 = const Color(NordColorCodes.$12);
+  static const $13 = const Color(NordColorCodes.$13);
+  static const $14 = const Color(NordColorCodes.$14);
+  static const $15 = const Color(NordColorCodes.$15);
 }

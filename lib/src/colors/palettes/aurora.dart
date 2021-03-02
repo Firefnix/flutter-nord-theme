@@ -1,7 +1,7 @@
 import '../colors.dart';
 
 class NordAurora {
-  NordAurora();
+  const NordAurora();
 
   final red = NordColors.$11;
   final orange = NordColors.$12;
