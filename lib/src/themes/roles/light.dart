@@ -3,48 +3,44 @@ import 'package:flutter/material.dart';
 import 'package:flutter_nord_theme/flutter_nord_theme.dart';
 import 'roles.dart';
 
-class NordDarkColorRoles extends NordColorRoles {
+class NordLightColorRoles extends NordColorRoles {
   @override
-  final brightness = Brightness.dark;
+  final Brightness brightness = Brightness.light;
 
   @override
-  final Color primary = NordColors.frost.lighter;
+  final Color primary = NordColors.frost.darker;
 
   @override
-  final Color accent = NordColors.frost.darker;
+  final Color accent = NordColors.frost.lighter;
 
   @override
-  final Color text = NordColors.snowStorm.lightest;
+  final Color text = NordColors.polarNight.darkest;
 
   /// Flutter dark theme's is `0x40CCCCCC`.
   @override
   final Color splash = NordColors.$1.withAlpha(0x40);
 
   @override
-  final Color shadow = NordColors.$0.withOpacity(0.25);
-
-  /// Source: Nord's doc.
-  @override
-  final Color background = NordColors.polarNight.darkest;
+  final Color background = NordColors.snowStorm.lightest;
 
   @override
-  final Color bottomAppBar = NordColors.polarNight.darkest;
+  final Color bottomAppBar = NordColors.snowStorm.medium;
 
   @override
-  final Color dialogBackground = NordColors.polarNight.darker;
+  final Color dialogBackground = NordColors.snowStorm.medium;
 
   @override
   final Color card = NordColors.$2;
 
-  // TODO: Change dark theme divider color
+  // TODO: Change light theme divider color
   @override
   final Color divider = NordColors.$4.withAlpha(50);
 
-  // TODO: Change dark theme focus color
+  // TODO: Change light theme focus color
   @override
   final Color focus = NordColors.$3.withAlpha(50);
 
-  // TODO: Change dark theme hover color
+  // TODO: Change light theme hover color
   @override
   final Color hover = NordColors.$3.withAlpha(50);
 
@@ -65,10 +61,10 @@ class NordDarkColorRoles extends NordColorRoles {
 
   /// The same as [unselectedWidget].
   @override
-  final Color disabled = NordColors.snowStorm.lightest.withAlpha(0xB3);
+  final Color disabled = NordColors.polarNight.lightest.withAlpha(0x53);
 
-  /// The color to use for hint text or placeholder text, e.g. in [TextField]
-  /// fields.
+  /// "The color to use for hint text or placeholder text, e.g. in
+  /// [TextField] fields." (Flutter's code)
   @override
-  final Color hint = NordColors.snowStorm.darkest;
+  final Color hint = NordColors.polarNight.lightest;
 }
