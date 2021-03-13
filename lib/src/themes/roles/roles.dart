@@ -114,7 +114,7 @@ abstract class NordColorRoles {
           return button;
         }),
         backgroundColor: MaterialStateProperty.all<Color>(Colors.transparent),
-        overlayColor: MaterialStateProperty.resolveWith<Color>((states) {
+        overlayColor: MaterialStateProperty.resolveWith<Color?>((states) {
           if (states.contains(MaterialState.hovered))
             return button.withOpacity(0.04);
           if (states.contains(MaterialState.focused) ||
@@ -127,11 +127,11 @@ abstract class NordColorRoles {
 
   /// The theme for [ElevatedButton] widgets.
   ButtonStyle get elevatedButton => ButtonStyle(
-        foregroundColor: MaterialStateProperty.resolveWith<Color>((states) {
+        foregroundColor: MaterialStateProperty.resolveWith<Color?>((states) {
           if (states.contains(MaterialState.disabled)) return null;
           return NordColors.snowStorm.lightest;
         }),
-        backgroundColor: MaterialStateProperty.resolveWith<Color>((states) {
+        backgroundColor: MaterialStateProperty.resolveWith<Color?>((states) {
           if (states.contains(MaterialState.disabled)) return null;
           return button;
         }),
@@ -139,10 +139,10 @@ abstract class NordColorRoles {
 
   /// The theme for [OutlinedButton] widgets.
   ButtonStyle get outlinedButton => ButtonStyle(
-        foregroundColor: MaterialStateProperty.resolveWith<Color>((states) =>
+        foregroundColor: MaterialStateProperty.resolveWith<Color?>((states) =>
             states.contains(MaterialState.disabled) ? null : button),
         backgroundColor: MaterialStateProperty.all<Color>(Colors.transparent),
-        overlayColor: MaterialStateProperty.resolveWith<Color>((states) {
+        overlayColor: MaterialStateProperty.resolveWith<Color?>((states) {
           if (states.contains(MaterialState.hovered)) {
             return button.withOpacity(0.04);
           }
@@ -152,7 +152,7 @@ abstract class NordColorRoles {
           }
           return null;
         }),
-        side: MaterialStateProperty.resolveWith<BorderSide>(
+        side: MaterialStateProperty.resolveWith<BorderSide?>(
           (states) => states.contains(MaterialState.disabled)
               ? null
               : BorderSide(color: button),
@@ -160,5 +160,5 @@ abstract class NordColorRoles {
       );
 
   /// The theme for [Switch] widgets.
-  SwitchThemeData get switchTheme => null;
+  SwitchThemeData? get switchTheme => null;
 }
