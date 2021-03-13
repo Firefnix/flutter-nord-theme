@@ -166,7 +166,10 @@ abstract class NordColorRoles {
     return NavigationRailThemeData(
       backgroundColor: bottomAppBar,
       unselectedLabelTextStyle: TextStyle(fontSize: 10),
-      selectedLabelTextStyle: TextStyle(fontSize: 10),
+      selectedLabelTextStyle: TextStyle(
+        fontSize: 10,
+        color: primary,
+      ),
       unselectedIconTheme: IconThemeData(),
       selectedIconTheme: IconThemeData(color: primary),
     );
