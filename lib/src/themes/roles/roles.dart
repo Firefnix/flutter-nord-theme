@@ -161,4 +161,14 @@ abstract class NordColorRoles {
 
   /// The theme for [Switch] widgets.
   SwitchThemeData? get switchTheme => null;
+
+  NavigationRailThemeData? get navigationRail {
+    return NavigationRailThemeData(
+      backgroundColor: bottomAppBar,
+      unselectedLabelTextStyle: TextStyle(fontSize: 10),
+      selectedLabelTextStyle: TextStyle(fontSize: 10),
+      unselectedIconTheme: IconThemeData(),
+      selectedIconTheme: IconThemeData(color: primary),
+    );
+  }
 }

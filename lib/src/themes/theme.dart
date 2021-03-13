@@ -42,5 +42,6 @@ class NordTheme {
         outlinedButtonTheme:
             OutlinedButtonThemeData(style: roles.outlinedButton),
         switchTheme: roles.switchTheme,
+        navigationRailTheme: roles.navigationRail,
       );
 }
