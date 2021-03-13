@@ -1,7 +1,6 @@
 name: flutter_nord_theme
 description: Flutter theme using the Nord color palette.
 version: 1.0.0
-author: Firefnix
 repository: https://github.com/Firefnix/flutter-nord-theme
 
 environment:
