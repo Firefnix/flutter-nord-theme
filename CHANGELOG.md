@@ -1,5 +1,8 @@
 # flutter_nord_theme
 
+## 2.0.1
+* Added a theme for NavigationRail
+
 ## 2.0.0
 * Migrating to null safety.
 
