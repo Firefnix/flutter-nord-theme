@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_nord_theme/flutter_nord_theme.dart';
-import 'package:nord/theme.dart';
+
+import 'theme.dart';
 
 class ThemeSwitchListTile extends StatefulWidget {
   @override
