@@ -162,6 +162,7 @@ abstract class NordColorRoles {
   /// The theme for [Switch] widgets.
   SwitchThemeData? get switchTheme => null;
 
+  /// The theme for [NavigationRail] widgets.
   NavigationRailThemeData? get navigationRail {
     return NavigationRailThemeData(
       backgroundColor: bottomAppBar,
@@ -172,6 +173,14 @@ abstract class NordColorRoles {
       ),
       unselectedIconTheme: IconThemeData(),
       selectedIconTheme: IconThemeData(color: primary),
+    );
+  }
+
+  /// The theme for [FloatingActionButton] widgets.
+  FloatingActionButtonThemeData? get floatingActionButton {
+    return FloatingActionButtonThemeData(
+      foregroundColor: NordColors.snowStorm.lightest,
+      backgroundColor: primary,
     );
   }
 }
