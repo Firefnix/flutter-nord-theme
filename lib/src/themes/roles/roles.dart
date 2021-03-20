@@ -16,6 +16,26 @@ import 'light.dart';
 /// are not referenced here (for example [ThemeData.primaryColorLight]'s value
 /// is actually set in [NordLightColorRoles.primary]).
 abstract class NordColorRoles {
+  /// This set of color is at the base of the theme.
+  ///
+  /// Most of the widgets' theme elements can be set from the color scheme, and
+  /// in theory, all the other [ThemeData] properties are just overrides.
+  ColorScheme get colorScheme => ColorScheme(
+        primary: primary,
+        primaryVariant: primary,
+        secondary: secondary,
+        secondaryVariant: secondary,
+        surface: card,
+        background: background,
+        error: error,
+        onPrimary: _lightText,
+        onSecondary: _lightText,
+        onSurface: text,
+        onBackground: text,
+        onError: _lightText,
+        brightness: brightness,
+      );
+
   /// Either light or dark.
   Brightness get brightness;
 
@@ -26,8 +46,14 @@ abstract class NordColorRoles {
   /// The primary accent color, used next to the [primary] color of the theme.
   Color get accent;
 
+  /// The new, other name of [accent].
+  Color get secondary => accent;
+
   /// The default color for a [Text] widget.
   Color get text;
+
+  /// A light text, used on vivid backgrounds.
+  final Color _lightText = NordColors.snowStorm.lightest;
 
   /// The highlight color used when the text of a [SelectableText] is selected.
   ///

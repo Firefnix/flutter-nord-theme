@@ -4,18 +4,25 @@ import 'roles/roles.dart';
 import 'roles/dark.dart';
 import 'roles/light.dart';
 
-class NordTheme {
+/// Provides a [light] and a [dark] theme ([ThemeData]).
+///
+/// This class is abstract so it cannot be instantiated.
+/// In reality, this class is an equivalent to [ThemeData], not [Theme].
+abstract class NordTheme {
   static final _lightRoles = NordLightColorRoles(),
       _darkRoles = NordDarkColorRoles();
 
   static final _lightTheme = ThemeData.light(), _darkTheme = ThemeData.dark();
 
+  /// A light, north-bluish theme.
   static ThemeData light() => _merge(_lightTheme, _lightRoles);
 
+  /// A dark, north-bluish theme.
   static ThemeData dark() => _merge(_darkTheme, _darkRoles);
 
   static ThemeData _merge(ThemeData original, NordColorRoles roles) =>
       original.copyWith(
+        colorScheme: roles.colorScheme,
         brightness: roles.brightness,
         primaryColor: roles.primary,
         accentColor: roles.accent,
