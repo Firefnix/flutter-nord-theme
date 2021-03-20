@@ -32,9 +32,8 @@ class NordLightColorRoles extends NordColorRoles {
   @override
   final Color card = NordColors.snowStorm.medium;
 
-  // TODO: Change light theme divider color
   @override
-  final Color divider = NordColors.$4.withAlpha(50);
+  final Color divider = NordColors.$4.withAlpha(100);
 
   // TODO: Change light theme focus color
   @override
