@@ -1,5 +1,13 @@
 # flutter_nord_theme
 
+## 2.1.0
+* New theme properties:
+  * Theme for FloatingActionButon.
+  * Each theme is now based on a ColorScheme.
+* Meta:
+  * Update package description.
+  * The documentation now covers all the elements of the public API.
+
 ## 2.0.2
 * Fixes
   * Label color for navigation theme
