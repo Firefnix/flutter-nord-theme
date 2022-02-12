@@ -9,26 +9,30 @@ import 'palettes/palettes.dart';
 /// By default, the colors are with an alpha value of 0xFF.
 /// The main source: https://www.nordtheme.com/docs/colors-and-palettes.
 abstract class NordColors {
-  /// Polar Night is composed of four dark grey colors.
+  /// Polar Night is composed of four dark grey colors: darkest ([$0]), darker
+  /// ([$1]), lighter ([$2]) and lightest ([$3]).
   ///
   /// The Nord light theme is based on this palette.
   static const polarNight = NordPolarNight();
 
-  /// A palette made up of three bright grey colors.
+  /// A palette made up of three bright grey colors: darkest ([$4]), medium
+  /// ([$5]) and lightest ([$6]).
   ///
   /// The Nord light theme is based on this palette.
   static const snowStorm = NordSnowStorm();
 
-  /// The heart palette of Nord, a group of four bluish colors.
+  /// The heart palette of Nord, a group of four bluish colors: lightest ([$7]),
+  /// lighter ([$8]), darker ([$9]) and darkest ([$10]).
   ///
   /// The color schemes of both light and dark themes are based on this palette.
   static const frost = NordFrost();
 
   /// Aurora consists of five vivid, colorful components reminiscent of polar
-  /// lights.
+  /// lights: red ([$11]), orange ([$12]), yellow ([$13]), green ([$14]) and
+  /// purple ([$15]).
   static const aurora = NordAurora();
 
-  /// The origin color or the Polar Night palette.
+  /// The origin color of the Polar Night palette.
   static const $0 = const Color(NordColorCodes.$0);
 
   /// A brighter shade color based on [$0].
