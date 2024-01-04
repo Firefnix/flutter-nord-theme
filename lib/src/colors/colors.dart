@@ -33,51 +33,51 @@ abstract class NordColors {
   static const aurora = NordAurora();
 
   /// The origin color of the Polar Night palette.
-  static const $0 = const Color(NordColorCodes.$0);
+  static const $0 = Color(NordColorCodes.$0);
 
   /// A brighter shade color based on [$0].
-  static const $1 = const Color(NordColorCodes.$1);
+  static const $1 = Color(NordColorCodes.$1);
 
   /// An even more brighter shade color of [$0]].
-  static const $2 = const Color(NordColorCodes.$2);
+  static const $2 = Color(NordColorCodes.$2);
 
   /// The brightest shade color based on [$0].
-  static const $3 = const Color(NordColorCodes.$3);
+  static const $3 = Color(NordColorCodes.$3);
 
   /// The origin color or the Snow Storm palette.
-  static const $4 = const Color(NordColorCodes.$4);
+  static const $4 = Color(NordColorCodes.$4);
 
   /// A brighter shade color of [$4].
-  static const $5 = const Color(NordColorCodes.$5);
+  static const $5 = Color(NordColorCodes.$5);
 
   /// The brightest shade color based on [$4].
-  static const $6 = const Color(NordColorCodes.$6);
+  static const $6 = Color(NordColorCodes.$6);
 
   /// A calm and highly contrasted color reminiscent of frozen polar water.
-  static const $7 = const Color(NordColorCodes.$7);
+  static const $7 = Color(NordColorCodes.$7);
 
   /// The bright and shiny primary accent color reminiscent of pure and clear
   /// ice.
-  static const $8 = const Color(NordColorCodes.$8);
+  static const $8 = Color(NordColorCodes.$8);
 
   /// A more darkened and less saturated color reminiscent of arctic waters.
-  static const $9 = const Color(NordColorCodes.$9);
+  static const $9 = Color(NordColorCodes.$9);
 
   /// A dark and intensive color reminiscent of the deep arctic ocean.
-  static const $10 = const Color(NordColorCodes.$10);
+  static const $10 = Color(NordColorCodes.$10);
 
   /// A vermilion, yet soothing color.
-  static const $11 = const Color(NordColorCodes.$11);
+  static const $11 = Color(NordColorCodes.$11);
 
   /// A saturated, imposing orange color.
-  static const $12 = const Color(NordColorCodes.$12);
+  static const $12 = Color(NordColorCodes.$12);
 
   /// A calming yellow color.
-  static const $13 = const Color(NordColorCodes.$13);
+  static const $13 = Color(NordColorCodes.$13);
 
   /// A nice, neither too bright nor too dark, green color.
-  static const $14 = const Color(NordColorCodes.$14);
+  static const $14 = Color(NordColorCodes.$14);
 
   /// A dark, dull violet color.
-  static const $15 = const Color(NordColorCodes.$15);
+  static const $15 = Color(NordColorCodes.$15);
 }

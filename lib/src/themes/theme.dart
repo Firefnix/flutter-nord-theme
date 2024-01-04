@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'roles/roles.dart';
 import 'roles/dark.dart';
 import 'roles/light.dart';
+import 'roles/roles.dart';
 
 /// Provides a [light] and a [dark] theme ([ThemeData]).
 ///
@@ -22,26 +22,43 @@ abstract class NordTheme {
 
   static ThemeData _merge(ThemeData original, NordColorRoles roles) =>
       original.copyWith(
-        colorScheme: roles.colorScheme,
         brightness: roles.brightness,
         primaryColor: roles.primary,
-        accentColor: roles.accent,
         canvasColor: roles.canvas,
         shadowColor: roles.shadow,
         scaffoldBackgroundColor: roles.scaffoldBackground,
-        bottomAppBarColor: roles.bottomAppBar,
         cardColor: roles.card,
         dividerColor: roles.divider,
-        toggleableActiveColor: roles.toggleableActive,
+        radioTheme: RadioThemeData(
+          fillColor: MaterialStateProperty.resolveWith<Color?>(
+              (Set<MaterialState> states) {
+            if (states.contains(MaterialState.disabled)) {
+              return null;
+            }
+            if (states.contains(MaterialState.selected)) {
+              return roles.toggleableActive;
+            }
+            return null;
+          }),
+        ),
+        checkboxTheme: CheckboxThemeData(
+          fillColor: MaterialStateProperty.resolveWith<Color?>(
+              (Set<MaterialState> states) {
+            if (states.contains(MaterialState.disabled)) {
+              return null;
+            }
+            if (states.contains(MaterialState.selected)) {
+              return roles.toggleableActive;
+            }
+            return null;
+          }),
+        ),
         focusColor: roles.focus,
         hoverColor: roles.hover,
         highlightColor: roles.highlight,
         splashColor: roles.splash,
-        errorColor: roles.error,
-        selectedRowColor: roles.selectedRow,
         unselectedWidgetColor: roles.unselectedWidget,
         disabledColor: roles.disabled,
-        buttonColor: roles.button,
         textSelectionTheme: roles.textSelection,
         textButtonTheme: TextButtonThemeData(style: roles.textButton),
         elevatedButtonTheme:
@@ -51,5 +68,9 @@ abstract class NordTheme {
         switchTheme: roles.switchTheme,
         navigationRailTheme: roles.navigationRail,
         floatingActionButtonTheme: roles.floatingActionButton,
+        bottomAppBarTheme: BottomAppBarTheme(color: roles.bottomAppBar),
+        colorScheme: roles.colorScheme
+            .copyWith(secondary: roles.accent)
+            .copyWith(error: roles.error),
       );
 }

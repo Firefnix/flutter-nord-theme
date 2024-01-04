@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-final texts = [
+const texts = <Widget>[
   Text('Example text.'),
   SelectableText('Selectable text.'),
 ];

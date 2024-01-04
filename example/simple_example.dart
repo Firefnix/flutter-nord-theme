@@ -7,18 +7,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_nord_theme/flutter_nord_theme.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) => MaterialApp(
         themeMode: ThemeMode.light, // Or [ThemeMode.dark]
         theme: NordTheme.light(),
         darkTheme: NordTheme.dark(),
         home: Scaffold(
-          appBar: AppBar(title: Text('Title')),
-          body: Center(child: Text('Example text.')),
+          appBar: AppBar(title: const Text('Title')),
+          body: const Center(child: Text('Example text.')),
         ),
       );
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
 import 'package:flutter_nord_theme/flutter_nord_theme.dart';
+
 import 'roles.dart';
 
 class NordLightColorRoles extends NordColorRoles {
