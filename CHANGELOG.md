@@ -2,8 +2,9 @@
 
 ## 3.0.0
 
-- Increase Flutter compatibility
-- Update theme to Material 3
+- Increased Flutter compatibility
+  - Increased Flutter minimum support to >=2.0.0
+- Updated themes to Material 3
 
 ## 2.1.0
 
