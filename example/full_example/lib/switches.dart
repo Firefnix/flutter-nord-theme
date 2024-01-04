@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 
 final List<Widget> switches = [
-  ToggleableSwitch(),
-  Switch(value: false, onChanged: (_) => null),
-  Switch(value: false, onChanged: null),
+  const ToggleableSwitch(),
+  Switch(value: false, onChanged: (_) {}),
+  const Switch(value: false, onChanged: null),
 ];
 
 class ToggleableSwitch extends StatefulWidget {
+  const ToggleableSwitch({Key? key}) : super(key: key);
+
   @override
-  _ToggleableSwitchState createState() => _ToggleableSwitchState();
+  State<ToggleableSwitch> createState() => _ToggleableSwitchState();
 }
 
 class _ToggleableSwitchState extends State<ToggleableSwitch> {

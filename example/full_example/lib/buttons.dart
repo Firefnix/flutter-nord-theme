@@ -1,27 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_nord_theme/flutter_nord_theme.dart';
 
-final List<Widget> buttons = [
+final buttons = <Widget>[
   TextButton(
-    child: Text('TextButton'),
-    onPressed: () => null,
+    child: const Text('TextButton'),
+    onPressed: () {},
   ),
   ElevatedButton(
-    child: Text('ElevatedButton'),
-    onPressed: () => null,
+    child: const Text('ElevatedButton'),
+    onPressed: () {},
   ),
   OutlinedButton(
-    child: Text('OutlinedButton'),
-    onPressed: () => null,
+    child: const Text('OutlinedButton'),
+    onPressed: () {},
   ),
   ElevatedButton(
-    child: Text('Custom button'),
     style: ElevatedButton.styleFrom(
-      primary: NordColors.aurora.red,
+      backgroundColor: NordColors.aurora.red,
     ),
-    onPressed: () => null,
+    onPressed: () {},
+    child: const Text('Custom button'),
   ),
-  TextButton(child: Text('TextButton'), onPressed: null),
-  ElevatedButton(child: Text('ElevatedButton'), onPressed: null),
-  OutlinedButton(child: Text('OutlinedButton'), onPressed: null),
+  const TextButton(onPressed: null, child: Text('TextButton')),
+  const ElevatedButton(onPressed: null, child: Text('ElevatedButton')),
+  const OutlinedButton(onPressed: null, child: Text('OutlinedButton')),
 ];
