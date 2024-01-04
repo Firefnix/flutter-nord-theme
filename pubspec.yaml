@@ -1,11 +1,11 @@
 name: flutter_nord_theme
 description: An arctic, north-bluish theme for Flutter, based on the Nord theme.
-version: 2.1.0
+version: 3.0.0
 repository: https://github.com/Firefnix/flutter-nord-theme
 
 environment:
-  sdk: '>=2.12.0 <4.0.0'
-  flutter: '>=2.0.0'
+  sdk: ">=2.12.0 <4.0.0"
+  flutter: ">=2.0.0"
 
 dependencies:
   flutter:
