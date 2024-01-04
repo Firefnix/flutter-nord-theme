@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
 import 'package:flutter_nord_theme/flutter_nord_theme.dart';
+
 import 'light.dart';
 
 /// This class describes the role of each color.
@@ -22,9 +22,9 @@ abstract class NordColorRoles {
   /// in theory, all the other [ThemeData] properties are just overrides.
   ColorScheme get colorScheme => ColorScheme(
         primary: primary,
-        primaryVariant: primary,
+        primaryContainer: primary,
         secondary: secondary,
-        secondaryVariant: secondary,
+        secondaryContainer: secondary,
         surface: card,
         background: background,
         error: error,
@@ -70,7 +70,7 @@ abstract class NordColorRoles {
   Color get splash;
 
   /// The color of shadows (e.g. for [Card] widgets).
-  final Color shadow = Color(0x590f1115);
+  Color get shadow => const Color(0x590f1115);
 
   /// A color that contrasts with [primary], e.g. used as the remaining part of
   /// a progress bar.
@@ -141,8 +141,9 @@ abstract class NordColorRoles {
         }),
         backgroundColor: MaterialStateProperty.all<Color>(Colors.transparent),
         overlayColor: MaterialStateProperty.resolveWith<Color?>((states) {
-          if (states.contains(MaterialState.hovered))
+          if (states.contains(MaterialState.hovered)) {
             return button.withOpacity(0.04);
+          }
           if (states.contains(MaterialState.focused) ||
               states.contains(MaterialState.pressed)) {
             return button.withOpacity(0.12);
@@ -192,12 +193,12 @@ abstract class NordColorRoles {
   NavigationRailThemeData? get navigationRail {
     return NavigationRailThemeData(
       backgroundColor: bottomAppBar,
-      unselectedLabelTextStyle: TextStyle(fontSize: 10),
+      unselectedLabelTextStyle: const TextStyle(fontSize: 10),
       selectedLabelTextStyle: TextStyle(
         fontSize: 10,
         color: primary,
       ),
-      unselectedIconTheme: IconThemeData(),
+      unselectedIconTheme: const IconThemeData(),
       selectedIconTheme: IconThemeData(color: primary),
     );
   }
